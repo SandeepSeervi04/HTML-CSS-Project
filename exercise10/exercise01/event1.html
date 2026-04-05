@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Event Handling Demo</h2>
+
+    <!-- Click Event -->
+    <button onclick="changeColor()">Change Background</button>
+
+    <!-- Double Click -->
+    <button ondblclick="doubleClick()">Double Click Me</button>
+
+    <!-- Mouse Over -->
+    <img src="https://via.placeholder.com/150" 
+         onmouseover="changeImage(this)" 
+         onmouseout="resetImage(this)">
+
+    <!-- Key Press -->
+    <input type="text" placeholder="Press any key" onkeypress="keyPress()">
+
+    <!-- Input Event -->
+    <input type="text" id="name" placeholder="Type your name" oninput="showText()">
+    <p id="output"></p>
+
+    <!-- Change Event -->
+    <select onchange="showOption(this)">
+        <option>Select Course</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+    </select>
+    <p id="course"></p>
+
+</div>
+
+<script>
+
+function changeColor() {
+    document.body.style.background = "linear-gradient(to right, #ff7e5f, #feb47b)";
+}
+
+function doubleClick() {
+    alert("You double clicked!");
+}
+
+function changeImage(img) {
+    img.src = "https://via.placeholder.com/150/ff0000";
+}
+
+function resetImage(img) {
+    img.src = "https://via.placeholder.com/150";
+}
+
+function keyPress() {
+    alert("Key pressed!");
+}
+
+function showText() {
+    let name = document.getElementById("name").value;
+    document.getElementById("output").innerText = "Hello " + name;
+}
+
+function showOption(select) {
+    document.getElementById("course").innerText = "Selected: " + select.value;
+}
+
+</script>
+
+</body>
+</html>
