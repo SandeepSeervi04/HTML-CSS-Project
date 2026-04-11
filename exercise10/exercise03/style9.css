@@ -1,26 +1,23 @@
 body {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
     font-family: Arial;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    width: 350px;
-    margin: 80px auto;
     background: white;
     padding: 20px;
-    text-align: center;
     border-radius: 10px;
+    text-align: center;
 }
 
-input {
-    width: 90%;
-    padding: 8px;
-    margin: 10px 0;
-}
-
-button {
-    padding: 10px;
-    background: #ff7e5f;
-    color: white;
-    border: none;
+.image {
+    width: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
 }

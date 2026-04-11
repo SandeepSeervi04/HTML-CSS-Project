@@ -1,13 +1,49 @@
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: linear-gradient(to right, #36d1dc, #5b86e5);
-    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Main container */
 .container {
-    width: 300px;
-    margin: 100px auto;
     background: white;
-    padding: 20px;
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
+    width: 80%;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Image layout */
+.image-box {
+    display: inline-block;
+    margin: 15px;
+}
+
+/* Images */
+.image-box img {
+    width: 400px;
+    height: 250px;
     border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* Caption */
+.image-box p {
+    margin-top: 8px;
+    font-weight: bold;
 }
